@@ -1,0 +1,94 @@
+﻿@model ShotgunAcademy.Models.OrderedPlayers
+@{
+    ViewData["Title"] = "Home";
+}
+
+<h2>Campus Martius</h2>
+
+<table class="table table-condensed">
+    <thead>
+        <tr>
+            <th class="col-md-1"></th>
+            <th class="col-md-1"></th>
+            <th class="col-md-2">GamerTag</th>
+            <th class="col-md-1">Time</th>            
+        </tr>
+    </thead>
+    @foreach (var player in Model.SrlCMPlayers)
+    {
+        <tr>
+            <td class="col-md-1">@player.CMLadderNo</td>
+            <td class="col-md-1">@player.Platform</td>
+            <td class="col-md-2">@player.GamerTag</td>
+            <td class="col-md-1">@player.CampusMartiusTimeDisplay</td>            
+        </tr>
+    }
+</table>
+
+
+<h2>Infinite Decent</h2>
+
+<table class="table table-condensed">
+    <thead>
+        <tr>
+            <th class="col-md-1"></th>
+            <th class="col-md-1"></th>
+            <th class="col-md-2">GamerTag</th>
+            <th class="col-md-1">Time</th>
+        </tr>
+    </thead>
+    @foreach (var player in Model.SrlIDPlayers)
+    {
+        <tr>
+            <td class="col-md-1">@player.IDLadderNo</td>
+            <td class="col-md-1">@player.Platform</td>
+            <td class="col-md-2">@player.GamerTag</td>
+            <td class="col-md-1">@player.InfiniteDecentTimeDisplay</td>
+        </tr>
+    }
+</table>
+
+<h2>Haakon Principle</h2>
+
+<table class="table table-condensed">
+    <thead>
+        <tr>
+            <th class="col-md-1"></th>
+            <th class="col-md-1"></th>
+            <th class="col-md-2">GamerTag</th>
+            <th class="col-md-1">Time</th>
+        </tr>
+    </thead>
+    @foreach (var player in Model.SrlHPPlayers)
+    {
+        <tr>
+            <td class="col-md-1">@player.HPLadderNo</td>
+            <td class="col-md-1">@player.Platform</td>
+            <td class="col-md-2">@player.GamerTag</td>
+            <td class="col-md-1">@player.HaakonPrincipleTimeDisplay</td>
+        </tr>
+    }
+</table>
+
+
+<h2>Haakon Principle</h2>
+
+<table class="table table-condensed">
+    <thead>
+        <tr>
+            <th class="col-md-1"></th>
+            <th class="col-md-1"></th>
+            <th class="col-md-2">GamerTag</th>
+            <th class="col-md-1">Time</th>
+        </tr>
+    </thead>
+    @foreach (var player in Model.SrlSSPlayers)
+    {
+        <tr>
+            <td class="col-md-1">@player.SSLadderNo</td>
+            <td class="col-md-1">@player.Platform</td>
+            <td class="col-md-2">@player.GamerTag</td>
+            <td class="col-md-1">@player.ShiningSandsTimeDisplay</td>
+        </tr>
+    }
+</table>

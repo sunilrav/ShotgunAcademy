@@ -1,0 +1,68 @@
+﻿@model List<ShotgunAcademy.Models.Player>
+@{
+    ViewData["Title"] = "Xbox";
+}
+
+<h1>Play Station</h1>
+
+<h2>Jedi Master of the High Council</h2>
+
+<table class="table table-condensed">
+    <thead><tr><th class="col-md-4">GamerTag</th><th class="col-md-4">Rumble Elo</th><th class="col-md-4">Trails Elo</th></tr></thead>
+    @foreach (var player in Model.Where(x => x.Rank == 5))
+    {
+
+        <tr><td class="col-md-4">@player.GamerTag</td><td class="col-md-4">@player.RumbleElo</td><td class="col-md-4">@player.TrailsElo</td></tr>
+    }
+</table>
+
+<h2>Jedi Master</h2>
+<table class="table table-condensed">
+    <thead><tr><th class="col-md-4">GamerTag</th><th class="col-md-4">Rumble Elo</th><th class="col-md-4">Trails Elo</th></tr></thead>
+    @foreach (var player in Model.Where(x => x.Rank == 4))
+    {
+
+        <tr><td class="col-md-4">@player.GamerTag</td><td class="col-md-4">@player.RumbleElo</td><td class="col-md-4">@player.TrailsElo</td></tr>
+    }
+</table>
+
+<h2>Jedi Knight</h2>
+<table class="table table-condensed">
+    <thead><tr><th class="col-md-4">GamerTag</th><th class="col-md-4">Rumble Elo</th><th class="col-md-4">Trails Elo</th></tr></thead>
+    @foreach (var player in Model.Where(x => x.Rank == 3))
+    {
+
+        <tr><td class="col-md-4">@player.GamerTag</td><td class="col-md-4">@player.RumbleElo</td><td class="col-md-4">@player.TrailsElo</td></tr>
+    }
+</table>
+
+<h2>Padawan</h2>
+<table class="table table-condensed">
+    <thead><tr><th class="col-md-4">GamerTag</th><th class="col-md-4">Rumble Elo</th><th class="col-md-4">Trails Elo</th></tr></thead>
+    @foreach (var player in Model.Where(x => x.Rank == 2))
+    {
+
+        <tr><td class="col-md-4">@player.GamerTag</td><td class="col-md-4">@player.RumbleElo</td><td class="col-md-4">@player.TrailsElo</td></tr>
+    }
+</table>
+
+<h2>Initiates</h2>
+<table class="table table-condensed">
+    <thead><tr><th class="col-md-4">GamerTag</th><th class="col-md-4">Rumble Elo</th><th class="col-md-4">Trails Elo</th></tr></thead>
+    @foreach (var player in Model.Where(x => x.Rank == 1))
+    {
+
+        <tr><td class="col-md-4">@player.GamerTag</td><td class="col-md-4">@player.RumbleElo</td><td class="col-md-4">@player.TrailsElo</td></tr>
+    }
+</table>
+
+
+<h2>Force-Sensitive Candidates</h2>
+<table class="table table-condensed">
+    <thead><tr><th class="col-md-4">GamerTag</th><th class="col-md-4">Rumble Elo</th><th class="col-md-4">Trails Elo</th></tr></thead>
+    @foreach (var player in Model.Where(x => x.Rank == 0))
+    {
+
+        <tr><td class="col-md-4">@player.GamerTag</td><td class="col-md-4">@player.RumbleElo</td><td class="col-md-4">@player.TrailsElo</td></tr>
+    }
+</table>

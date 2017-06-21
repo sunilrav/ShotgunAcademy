@@ -1,0 +1,49 @@
+﻿@model PlayerInfo
+@{
+   ViewData["Title"] = "Join";
+}
+<h2>@ViewData["Title"]</h2>
+
+<h3>Join</h3>
+
+<p>
+    Are you a solid player that is looking to become a mentor?  
+    Do you think you could use guidance from more advanced players?  
+    Are you a content generator who is looking to team up?
+</p>
+<p>If you wish to join the ranks of the Shotgun Academy, there are 2 things that you need to do:</p>
+<p>1. Just fill in out application below! </p>
+<p>2. Download the Discord App. <a href="https://discordapp.com">https://discordapp.com</a>
+      and join our <a href="https://discord.gg/RX2nThV">SHOTGUN ACADEMY SERVER</a></p>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            <form asp-controller="Home" asp-action="Join" method="post">
+                <div asp-validation-summary="All" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="PlayerName">GamerTag/PSN ID</label>
+                    <input type="text" class="form-control" asp-for="PlayerName" placeholder="GamerTag/PSN ID">
+                    <span asp-validation-for="PlayerName" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Platform">Platform</label>
+                    <select class="form-control" asp-for="Platform">
+                        <option value="1">XB1</option>
+                        <option value="2">PS4</option>
+                    </select>                    
+                </div>
+                <div class="form-group">
+                    <label asp-for="Role">Role</label>
+                    <select class="form-control" asp-for="Role">
+                        <option value="Student">Student</option>
+                        <option value="Mentor">Mentor</option>
+                        <option value="Not Sure">Not Sure</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-default">Submit</button>
+            </form>
+        </div>
+        
+    </div>
+</div>

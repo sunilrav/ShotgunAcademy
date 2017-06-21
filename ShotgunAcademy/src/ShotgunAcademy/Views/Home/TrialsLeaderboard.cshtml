@@ -1,0 +1,39 @@
+﻿@model ShotgunAcademy.Models.OrderedPlayers
+@{
+    ViewData["Title"] = "Home";
+}
+
+<h3>&nbsp;</h3>
+
+<p>Ladder could be upto one hour behind.</p>
+
+<table class="table table-condensed">
+    <thead>
+        <tr>
+            <th class="col-md-1"></th>
+            <th class="col-md-1"></th>
+            <th class="col-md-2">GamerTag</th>
+            <th class="col-md-1">Current Elo</th>
+            <th class="col-md-1">+/-</th>
+            <th class="col-md-1">Last Month</th>
+            <th class="col-md-5">Two Months Ago</th>
+        </tr>
+    </thead>
+    @foreach (var player in Model.TrialsPlayers)
+    {
+        <tr>
+            <td class="col-md-1">@player.TrialsLadderNo</td>
+            <td class="col-md-1">@player.Platform</td>
+            <td class="col-md-2">@player.GamerTag</td>
+            <td class="col-md-1">@player.TrailsElo</td>
+            <td class="col-md-1">@((player.TrailsElo - player.ThisMonthTrialsElo).ToString("+0;-#"))</td>
+            <td class="col-md-1">@player.ThisMonthTrialsElo</td>
+            <td class="col-md-5">@player.LastMonthTrialsElo</td>
+        </tr>
+    }
+</table>
+
+<footer>
+    <p>Contact <a href="https://twitter.com/sunilr">@@sunilr(zingbangzing)</a> for any issues.</p>
+    <p>Built with stats from <a href="http://guardian.gg/en">GUARDIAN.GG</a></p>
+</footer>

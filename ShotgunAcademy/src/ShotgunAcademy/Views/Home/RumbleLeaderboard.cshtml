@@ -1,0 +1,35 @@
+﻿@model ShotgunAcademy.Models.OrderedPlayers
+@{
+    ViewData["Title"] = "Home";
+}
+
+<h3>&nbsp;</h3>
+
+<p>Ladder could be upto one hour behind.</p>
+
+<table class="table table-condensed">
+    <thead>
+        <tr>
+            <th class="col-md-1"></th>
+            <th class="col-md-1"></th>
+            <th class="col-md-2">GamerTag</th>
+            <th class="col-md-1">Current Rank</th>
+            <th class="col-md-5">&nbsp;</th>
+        </tr>
+    </thead>
+    @foreach (var player in Model.RumblePlayers)
+    {
+        <tr>
+            <td class="col-md-1">@player.RumbleLadderNo</td>
+            <td class="col-md-1">@player.Platform</td>
+            <td class="col-md-2">@player.GamerTag</td>
+            <td class="col-md-1">@player.RumbleRank</td>
+            <th class="col-md-5">&nbsp;</th>
+        </tr>
+    }
+</table>
+
+<footer>
+    <p>Contact <a href="https://twitter.com/sunilr">@@sunilr(zingbangzing)</a> for any issues.</p>
+    <p>Built with stats from <a href="http://guardian.gg/en">GUARDIAN.GG</a></p>
+</footer>
