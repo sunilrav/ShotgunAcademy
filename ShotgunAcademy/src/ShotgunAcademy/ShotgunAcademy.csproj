@@ -81,9 +81,12 @@
     <Content Include="wwwroot\img\full\33.jpg" />
     <Content Include="wwwroot\img\full\34.jpg" />
     <Content Include="wwwroot\img\full\35.jpg" />
+    <Content Include="wwwroot\img\full\bg-hunteremblem.png" />
+    <Content Include="wwwroot\img\full\bg-sentinel.png" />
+    <Content Include="wwwroot\img\full\bg-titanemblem.png" />
+    <Content Include="wwwroot\img\full\bg-warlockemblem.png" />
     <Content Include="wwwroot\img\full\bg1.png" />
     <Content Include="wwwroot\img\full\bg2.png" />
-    <Content Include="wwwroot\img\full\bg3.png" />
     <Content Include="wwwroot\img\full\bg4.png" />
     <Content Include="wwwroot\img\full\bg_no.png" />
     <Content Include="wwwroot\img\intro-video-bg.jpg" />
