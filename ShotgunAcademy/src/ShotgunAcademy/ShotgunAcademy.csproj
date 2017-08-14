@@ -39,6 +39,8 @@
     <Content Include="wwwroot\fonts\linea_icon_font\linea.svg" />
     <Content Include="wwwroot\fonts\linea_icon_font\linea.ttf" />
     <Content Include="wwwroot\fonts\linea_icon_font\linea.woff" />
+    <Content Include="wwwroot\images\discord-button1.png" />
+    <Content Include="wwwroot\images\discord-button2.png" />
     <Content Include="wwwroot\img\about-img01.jpg" />
     <Content Include="wwwroot\img\about-logo1.png" />
     <Content Include="wwwroot\img\about-logo2.png" />
